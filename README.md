@@ -11,7 +11,7 @@ A normal sanwa joystick has plunger switches and a round actuator. If you look a
 
 This shape complements a square gate, which tends to reflect up and down a little bit when you push against a cardinal angle.
 
-If you install a round gate, you no longer have the same reflection problems. to mitigate, but you have dramatically smaller diagonal areas:
+If you install a round gate, you no longer have the same gate reflection, but you have dramatically smaller diagonal areas:
 
 ![Sanwa-style round actuator and round gate](images/round-actuator.png)
 
