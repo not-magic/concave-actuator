@@ -11,7 +11,7 @@ This shape complements a square gate, which tends to reflect up and down a littl
 
 If you install a round gate, this shape tends to shrink the size of the diagonals dramatically. You no longer have the same reflection problems.
 
-![Sanwa-style round actuator and round gate](images/round-actuator-square_gate.png)
+![Sanwa-style round actuator and round gate](images/round-actuator.png)
 
 An IL/Eurostick joystick uses square actuator and a round "collar" which means the activation map looks something like this:
 
