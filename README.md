@@ -32,10 +32,10 @@ The actual activation area at the cardinals is slightly different because the sq
 In my time spent tinkering with sticks, the most desirable properties are:
 
 1. Large area diagonals (makes them easy to find)
-2. Wide cardinal zones (makes dashing easier and prevents accidental jumps)
-3. Shallow cardinal zones (makes dashing faster)
+2. Wide cardinal zones (makes finding cardinals easier and prevents accidental jumps)
+3. Shallow cardinal zones (makes dashing faster, taking less time to return to neutral).
 
-A concave actuator can achieve these properties better than other actuator types.
+These properties are normally in conflict with each other and require balancing that also complements the gate/collar shape and tension. A concave actuator allows the cardinal depth to be controlled independently.
 
 # Releases
 
