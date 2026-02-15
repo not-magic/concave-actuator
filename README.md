@@ -5,7 +5,7 @@ A 3d printed concave actuator for an IL/Eurostick
 
 ## Why would I want this?
 
-A normal sanwa joystick has plunger switches and a round actuator. If you look at the geometry when it makes contact with the switches, it is more sensitive at cardinal angles, and the activation map looks like this:
+A normal Sanwa-style joystick has plunger switches and a round actuator. If you look at the geometry when it makes contact with the switches, it is more sensitive at cardinal angles, and the activation map looks like this:
 
 ![Sanwa-style round actuator and square gate](images/round-actuator-square_gate.png)
 
@@ -15,19 +15,19 @@ If you install a round gate, you no longer have the same gate reflection, but yo
 
 ![Sanwa-style round actuator and round gate](images/round-actuator.png)
 
-An IL/Eurostick joystick uses square actuator and a round "collar" which means the activation map looks something like this:
+An IL/Eurostick joystick uses a square actuator and a round "collar" which means the activation map looks something like this:
 
 ![Square actuator](images/square-actuator.png)
 
-You also get a near identical activation map from a Seimitsu or Korean-lever style with lever switches and a round actuator.
+(You also get a near identical activation map from a Seimitsu or Korean-lever style with lever switches and a round actuator.)
 
-The observation that prompted this is, what does it look like if we had non-square sides? Using the same actuator simulator making shallow round cutouts in the side you can get an activation map that looks like this:
+The idea that prompted this is, what does it look like if we had non-square sides? Using the same actuator simulator making shallow round cutouts in the side you can get an activation map that looks like this:
 
 ![Square actuator](images/concave-actuator.png)
 
 The actual activation area at the cardinals is slightly different because the square actuator is free-spinning which is difficult to simulate, but it "squares" itself whenever it makes contact with two switches.
 
-## Why would you want this shape?
+## Why is this activation area good?
 
 In my time spent tinkering with sticks, the most desirable properties are:
 
@@ -39,6 +39,6 @@ A concave actuator can achieve these properties better than other actuator types
 
 # Releases
 
-In the releases you can find pre-bilt zip files that have a number of actuator shapes to experiment with, with sizes that show the width and depth of the cutout.
+In the releases you can find pre-built zip files that have a number of actuator shapes to experiment with, with sizes that show the width and depth of the cutout.
 
 In my personal testing I found a width of 6mm and depth of 1mm to feel nice.
