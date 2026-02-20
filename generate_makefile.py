@@ -16,8 +16,8 @@ CUTOUT_DEPTHS = [
 ]
 
 PRINTER_TYPE = {
-    "fdm": 1,
-    "sla": 0
+    "fdm": 0,
+    "sla": 1
 }
 
 with open("Makefile", "w") as f:

@@ -39,6 +39,7 @@ These properties are normally in conflict with each other and require balancing 
 
 # Releases
 
-In the releases you can find pre-built zip files that have a number of actuator shapes to experiment with, with sizes that show the width and depth of the cutout.
+In the releases you can find pre-built zip files that have a number of actuator shapes to experiment with, with sizes that show the width and depth of the cutout, as well as some versions for a SLA or FDM printer (FDM printers contain an internal relief slot for seams to go).
 
 In my personal testing I found a width of 6mm and depth of 1mm to feel nice.
+
