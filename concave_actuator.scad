@@ -1,11 +1,11 @@
 // the outer width (mm) of the actuator in the middle
-ACTUATOR_SIZE = 23.5;
+ACTUATOR_SIZE = 23.4;
 
 // the height of the active area 
 ACTUATOR_SWITCH_HEIGHT = 6.4;
 
 // the mm difference between the actuator size at the top and bottom of the active area, to account for the rotation of the stick, so the actuator presses the switch plungers approximately perpendicular
-ACTUATOR_SLANT = 1.0;
+ACTUATOR_SLANT = 1.5;
 
 // The width of the concave cutouts on the side of the actuator
 CUTOUT_WIDTH = 6;
@@ -13,10 +13,13 @@ CUTOUT_WIDTH = 6;
 CUTOUT_DEPTH = 1.0;
 
 // The total height of the actuator
-TOTAL_HEIGHT = 13.6;
+TOTAL_HEIGHT = 13.5;
+
+// 0 == FDM, 1 == anything else
+PRINTER_TYPE = 0;
 
 // The diameter of the stick shaft. If it is too tight and can't spin at all, this needs to be larger. If it has wiggle room it needs to be smaller. This value may need to be tuned for your printer to get it exactly right, I tuned this for a Prusa MK3S+ w/ 0.6mm nozzle.
-SHAFT_DIAMETER = 13.9;
+SHAFT_DIAMETER = 14.0;
 
 function sq(x) = x*x;
 
@@ -33,7 +36,7 @@ module actuator_shape(size, corner_rad)
 		{
 			for (n = [0:3])
 			{
-				rotate(90*n) translate([size/2-corner_rad, size/2-corner_rad]) circle(corner_rad);
+				rotate(90*n) translate([size/2-corner_rad, size/2-corner_rad]) circle(corner_rad, $fn=4);
 			}
 		}
 	}
@@ -59,7 +62,7 @@ module actuator_cutouts()
 
 difference()
 {
-	CORNER_RAD = 0.01;
+	CORNER_RAD = 4.0;
 	
 	union()
 	{
@@ -73,6 +76,7 @@ difference()
 		
 	}
 	
+	/*
 	difference()
 	{
 		hull()
@@ -89,14 +93,17 @@ difference()
 		
 		cylinder(r=SHAFT_DIAMETER/2+2, h=TOTAL_HEIGHT);
 		
-	}
+	}*/
 	
 	actuator_cutouts();
 
-	translate([0,0,-1.5]) cylinder(h=TOTAL_HEIGHT, r=SHAFT_DIAMETER/2, $fn=200);
+	translate([0,0,-1.2]) cylinder(h=TOTAL_HEIGHT, r=SHAFT_DIAMETER/2, $fn=200);
 	cylinder(d=12.5, h=100, center=true, $fn=200);
 	
-	rotate(45) translate([0,2.5,0]) cube([0.2,10, 100], center=true);
+	if (PRINTER_TYPE == 0)
+	{
+		rotate(45) translate([0,2.5,0]) cube([0.2,10, 100], center=true);
+	}
 	
 	translate([0,0,-150]) cube(300, center=true);
 }
